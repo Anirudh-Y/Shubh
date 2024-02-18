@@ -27,7 +27,7 @@ app.use(bodyParser.json({extended:true}))
   
   let chat;
   const MODEL_NAME = "gemini-1.0-pro";
-  const API_KEY = "AIzaSyAMezxCPgQ8w8YoybnIbQQ7JgSPoSyb8Sk";
+  const API_KEY = process.env.API_KEY;
   
   async function run(txt) {
     const genAI = await new GoogleGenerativeAI(API_KEY);
